@@ -2,5 +2,75 @@
 
 Fonts
 font-family: 'Playfair Display', serif;
+font-family: 'Noto Sans', sans-serif;
+
+Colors
+Almost black 
+#151515 
+Dark grey 
+#1e1e1e
+Grey
+#37272e
+White
+#f5f5f5
 
 */
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --aside:8rem;
+    --dark-mode-aside: #1e1e1e;
+    --dark-mode: #151515; 
+    --day-mode: #f5f5f5; 
+
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    justify-content: start;
+    align-items: center;
+}
+
+.right {
+    justify-content: end;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.fh {
+    height: 100vh;
+}
+
+.fw {
+    width: 100%;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+p, span, li, .btn {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
