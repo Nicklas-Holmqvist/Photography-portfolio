@@ -27,24 +27,27 @@
 </head>
 <body class="fhp">
     <!-- ALL PAGE INSIDE -->
-    <div class="page flex row fw">
+    <div class="page flex row fw fhp relative">
+
+        <div class="mode absolute">
+            <i class="fas fa-moon" id="mode"></i>
+        </div>
 
         <!-- menu -->
-        <aside class="flex column fhp">
-            <div class="aside-content center flex column fhp">
-                <div class="logo-container flex center flex-1"><img src="./style/img/logo-darkmode.png" class="logo" alt="day-logo">
+        <aside class="flex column">
+            <div class="aside-container center flex column fhp">
+                <div class="logo-container flex left flex-1"><img src="./style/img/logo-darkmode.png" class="logo" alt="day-logo">
                 </div>
-                <p id="mode">BYT</p>
-                <div class="menu flex-2">
+                <div class="menu flex-4 fw">
                     <ul class="flex start between column">
                         <li>Hem</li>
-                        <li>Gamla byggnader</li>
+                        <li>Gamla ting</li>
                         <li>Landskap</li>
                         <li>Porträtt</li>
                         <li>Om mig</li>
                     </ul>
                 </div>
-                <div class="social flex-1 flex row center evenly fw">
+                <div class="social flex-1 flex column between fw">
                     <a href="tel:+46706700883"><i class="fas fa-mobile-alt icon"></i></a>
                     <a href="mailto:nicklas_holmqvist@outlook.com"><i class="fas fa-envelope icon"></i></a>
                     <a href="https://github.com/Nicklas-Holmqvist"><i class="fab fa-github-square icon"></i></a>
@@ -55,34 +58,44 @@
         </aside>
 
         <!-- every content on page -->
-        <main class="fw fhp flex column">
-            <div class="start">
+        <main class="flex center column fw fhp">
+
+
+
+            <div class="start-image non-active fw fhp">
                 <img src="./style/img/start-1.png" alt="start-image">
 
             </div>
             
             <!-- menu-item -->
-            <div class="building height-section">
+            <div class="building main-section flex row non-active">
                 <div class="information">
-                    <h2>Gamla byggnader</h2>
-                    <p></p>
-                    <div class="btn">Se mer</div>
+                    <h2>Historian</h2>
+                    <p>Det senaste 100 åren har byggnader, historia försvunnit tillbaka till naturen.
+                    <br><br>
+                    Och jag har ett projekt där jag dokumenterar det som finns kvar.
+                    <br><br>
+                    Så många människor har slitit för att överleva och byggt det som vi nu knappt hittar i skogarna.
+                    <br><br>
+                    Det som syns är alla de små, stora, långa och korta stenmurarna å ibland någon jordkällare där de kunnat lagra mat svaligt.
+                    </p>
                 </div>
-                <div class="image">
-                    <img src="" alt="">
+                <div class="main-image">
+                    <div class="image-container flex center">
+                        <img src="./style/img/byggnader/byggnad-start.png" class="image" alt="byggnader-start">
+                    </div>
                 </div>
             </div>
-            <div class="landscape height-section">
+            <div class="landscape main-section flex row active">
                 <div class="information">
-                    <h2>Landskap</h2>
-                    <p></p>
-                    <div class="btn">Se mer</div>
+                    <h2>Framtid och dåtid</h2>
+                    <p>En liten text om våra vackra landskap</p>
                 </div>
-                <div class="image">
-                    <img src="" alt="">
+                <div class="main-image">
+                    <img src="./style/img/landskap/landskap-start.jpg" alt="landskap-start">
                 </div>
             </div>
-            <div class="portrait height-section">
+            <!-- <div class="portrait height-section">
                 <div class="information">
                     <h2>Porträtt</h2>
                     <p></p>
@@ -91,7 +104,7 @@
                 <div class="image">
                     <img src="" alt="">
                 </div>
-            </div>
+            </div> -->
             <div class="about">
 
             </div>

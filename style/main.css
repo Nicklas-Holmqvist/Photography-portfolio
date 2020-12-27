@@ -23,7 +23,7 @@ White
 }
 
 :root {
-    --aside:15rem;
+    --aside:9.7rem;
     --dark-mode-aside:#1b1b1b;
     --day-mode-aside: #f5f5f5; 
     --dark-mode: #151515; 
@@ -41,7 +41,7 @@ White
 
 .left {
     justify-content: start;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .right {
@@ -65,9 +65,13 @@ White
     justify-content: space-evenly;
 }
 
-.fh {
-    height: 100vh;
+.text-center {
+    text-align: center;
 }
+
+/* .fh {
+    height: 100vh;
+} */
 
 .fw {
     width: 100%;
@@ -77,9 +81,9 @@ White
     height: 100%;
 }
 
-.height-section {
+/* .height-section {
     height: 60rem;
-}
+} */
 
 .flex-1 {
     flex: 1;
@@ -87,6 +91,14 @@ White
 
 .flex-2 {
     flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-4 {
+    flex: 4;
 }
 
 h1, h2, h3, h4 {
@@ -118,6 +130,14 @@ a {
     background-color: var(--day-mode-aside)
 }
 
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
 /* main design blocks */
 aside {
     width: var(--aside);
@@ -135,14 +155,42 @@ main {
     transition: background-color .5s ease-out;
 }
 
+.mode {
+    top: 2rem;
+    right: 2rem;
+    color: var(--day-mode-aside);
+    /* padding: .3rem;
+    border: .5px var(--day-mode-aside) solid;
+    border-radius: 50%; */
+    mix-blend-mode: difference;
+}
+
+
+.non-active {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+.active {
+    display: flex;
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
 /* Aside */
 
+.aside-container {
+    padding-left: 1.5rem;
+}
+
 .logo-container {
+    padding-top: 2rem;
     padding-left: 1rem;
 }
 
 .logo {
-    width: 30%;
+    width: 40%;
 }
 
 ul {
@@ -152,19 +200,62 @@ ul {
 }
 
 .social {
-    align-items: flex-end;
-
-    padding: 0 1rem 2rem 1rem;
+    align-items: flex-start;
+    padding: 2rem 1rem 2rem 1rem;
     
 }
 
 /* Start image */
 
-.start img {
-    object-position: center;
+.start-image {
+    overflow: hidden;
+}
+
+.start-image img {
     object-fit: cover;
     width: 100%;
 }
+
+
+/* class */
+
+.main-section {
+    height: 80%;
+}
+
+.information {
+    align-self: flex-start;
+    padding: 4rem 2rem;
+    flex: 1;
+    margin-right: -8rem;
+}
+
+.information h2 {
+    padding-bottom: 1.5rem;
+}
+
+.information p {
+    padding-bottom: 2rem;
+}
+
+.information .btn {
+    padding-bottom: 1.5rem;
+}
+
+.main-image {
+    flex: 4;
+    margin-right: 2rem;
+    overflow: hidden;
+}
+
+
+.image-container .image {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    
+}
+
 
 
 
