@@ -16,7 +16,7 @@ White
 
 */
 
-body {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -28,7 +28,6 @@ body {
     --day-mode-aside: #f5f5f5; 
     --dark-mode: #151515; 
     --day-mode: #fafafa; 
-
 }
 
 .flex {
@@ -58,12 +57,28 @@ body {
     flex-direction: row;
 }
 
+.between {
+    justify-content: space-between;
+}
+
+.evenly {
+    justify-content: space-evenly;
+}
+
 .fh {
     height: 100vh;
 }
 
 .fw {
     width: 100%;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
 }
 
 h1, h2, h3, h4 {
@@ -79,6 +94,12 @@ p, span, li, .btn {
     font-weight: 300;
 }
 
+a {
+    text-decoration: none;
+    color: var(--day-mode);
+    mix-blend-mode: difference;
+}
+
 /* makes main background white */
 .dark-mode {
     background-color: var(--day-mode);
@@ -88,6 +109,7 @@ p, span, li, .btn {
     background-color: var(--day-mode-aside)
 }
 
+/* main design blocks */
 aside {
     width: var(--aside);
     background-color: var(--dark-mode-aside);
@@ -98,5 +120,33 @@ main {
     background-color: var(--dark-mode);    
     transition: background-color .5s ease-out;
 }
+
+/* Aside */
+
+.logo-container {
+    padding-left: 1rem;
+}
+
+.logo {
+    width: 30%;
+}
+
+ul {
+    list-style: none;
+    height: 15rem;
+    padding-left: 1rem;
+}
+
+li {
+
+}
+
+.social {
+    align-items: flex-end;
+
+    padding: 0 1rem 2rem 1rem;
+    
+}
+
 
 
