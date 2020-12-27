@@ -73,6 +73,14 @@ White
     width: 100%;
 }
 
+.fhp {
+    height: 100%;
+}
+
+.height-section {
+    height: 60rem;
+}
+
 .flex-1 {
     flex: 1;
 }
@@ -85,6 +93,7 @@ h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     mix-blend-mode: difference;
     color: var(--day-mode);
+    font-weight: 300;
 }
 
 p, span, li, .btn {
@@ -114,9 +123,14 @@ aside {
     width: var(--aside);
     background-color: var(--dark-mode-aside);
     transition: background-color .3s ease-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
 }
 
 main {
+    padding-left: var(--aside);
     background-color: var(--dark-mode);    
     transition: background-color .5s ease-out;
 }
@@ -137,15 +151,19 @@ ul {
     padding-left: 1rem;
 }
 
-li {
-
-}
-
 .social {
     align-items: flex-end;
 
     padding: 0 1rem 2rem 1rem;
     
+}
+
+/* Start image */
+
+.start img {
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
 }
 
 
