@@ -20,6 +20,10 @@ const mainSection = document.querySelectorAll('.main-section')
 const building = document.querySelector('.building')
 const landscape = document.querySelector('.landscape')
 const home = document.querySelector('.start-image')
+const buildingGallery = document.querySelector('.building-gallery')
+const landscapeGallery = document.querySelector('.landscape-gallery')
+const btnBuilding = document.querySelector('.btn-building')
+const btnLandscape = document.querySelector('.btn-landscape')
 
 console.log(changeLogo)
 
@@ -29,6 +33,8 @@ function addEventListeners() {
     navHome.addEventListener('click', goToHome)
     navBuilding.addEventListener('click', goToBuilding)
     navLandscape.addEventListener('click', goToLandscape)
+    btnBuilding.addEventListener('click', goToBuildingGallery)
+    btnLandscape.addEventListener('click', goToLandscapeGallery)
 
 }
 
@@ -48,7 +54,7 @@ function switchModes() {
 
 function goToHome() {
     if(!home.classList.contains('active')) {
-        mainSection.forEach((e) => {
+        nonActive.forEach((e) => {
             if(e.classList.contains('active')) {
                 e.classList.remove('active')
             }
@@ -59,7 +65,7 @@ function goToHome() {
 
 function goToBuilding() {
     if(!building.classList.contains('active')) {
-        mainSection.forEach((e) => {
+        nonActive.forEach((e) => {
             if(e.classList.contains('active')) {
                 e.classList.remove('active')
             }
@@ -70,12 +76,34 @@ function goToBuilding() {
 
 function goToLandscape() {
     if(!landscape.classList.contains('active')) {
-        mainSection.forEach((e) => {
+        nonActive.forEach((e) => {
             if(e.classList.contains('active')) {
                 e.classList.remove('active')
             }
         })
         landscape.classList.add('active')        
+    }
+}
+
+function goToBuildingGallery() {
+    if(!buildingGallery.classList.contains('active')) {
+        nonActive.forEach((e) => {
+            if(e.classList.contains('active')) {
+                e.classList.remove('active')
+            }
+        })
+        buildingGallery.classList.add('active')        
+    }
+}
+
+function goToLandscapeGallery() {
+    if(!landscapeGallery.classList.contains('active')) {
+        nonActive.forEach((e) => {
+            if(e.classList.contains('active')) {
+                e.classList.remove('active')
+            }
+        })
+        landscapeGallery.classList.add('active')        
     }
 }
 
