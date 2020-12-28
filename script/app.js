@@ -31,8 +31,8 @@ function addEventListeners() {
     
     switchMode.addEventListener('click', switchModes)
     navHome.addEventListener('click', goToHome)
-    navBuilding.addEventListener('click', goToBuilding)
-    navLandscape.addEventListener('click', goToLandscape)
+    navBuilding.addEventListener('click', goToBuildingGallery)
+    navLandscape.addEventListener('click', goToLandscapeGallery)
     btnBuilding.addEventListener('click', goToBuildingGallery)
     btnLandscape.addEventListener('click', goToLandscapeGallery)
 
