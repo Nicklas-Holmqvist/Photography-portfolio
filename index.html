@@ -40,11 +40,11 @@
                 </div>
                 <div class="menu flex-4 fw">
                     <ul class="flex start between column">
-                        <li>Hem</li>
-                        <li>Gamla ting</li>
-                        <li>Landskap</li>
-                        <li>Porträtt</li>
-                        <li>Om mig</li>
+                        <li id="nav-home">Hem</li>
+                        <li id="nav-building">Gamla ting</li>
+                        <li id="nav-landscape">Landskap</li>
+                        <li id="nav-portrait">Porträtt</li>
+                        <li id="nav-about">Om mig</li>
                     </ul>
                 </div>
                 <div class="social flex-1 flex column between fw">
@@ -60,36 +60,31 @@
         <!-- every content on page -->
         <main class="flex center column fw fhp">
 
-
-
-            <div class="start-image non-active fw fhp">
+            <div class="start-image main-section non-active active fw fhp">
                 <img src="./style/img/start-1.png" alt="start-image">
 
             </div>
             
             <!-- menu-item -->
-            <div class="building main-section flex row non-active">
-                <div class="information">
-                    <h2>Historian</h2>
-                    <p>Det senaste 100 åren har byggnader, historia försvunnit tillbaka till naturen.
+            <div class="building main-section flex center row non-active relative">
+                <div class="information absolute flex center">
+                    <h2>Gamla byggnader</h2>
+                    <!-- <p>Det senaste 100 åren har byggnader, historia försvunnit tillbaka till naturen.
                     <br><br>
                     Och jag har ett projekt där jag dokumenterar det som finns kvar.
                     <br><br>
                     Så många människor har slitit för att överleva och byggt det som vi nu knappt hittar i skogarna.
                     <br><br>
                     Det som syns är alla de små, stora, långa och korta stenmurarna å ibland någon jordkällare där de kunnat lagra mat svaligt.
-                    </p>
+                    </p> -->
                 </div>
                 <div class="main-image">
-                    <div class="image-container flex center">
-                        <img src="./style/img/byggnader/byggnad-start.png" class="image" alt="byggnader-start">
-                    </div>
+                    <img src="./style/img/byggnader/byggnad-start.png" class="image" alt="byggnader-start">                    
                 </div>
             </div>
-            <div class="landscape main-section flex row active">
-                <div class="information">
+            <div class="landscape main-section flex center row non-active relative">
+                <div class="information absolute">
                     <h2>Framtid och dåtid</h2>
-                    <p>En liten text om våra vackra landskap</p>
                 </div>
                 <div class="main-image">
                     <img src="./style/img/landskap/landskap-start.jpg" alt="landskap-start">

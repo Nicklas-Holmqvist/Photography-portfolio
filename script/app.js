@@ -9,14 +9,26 @@ let mainBg = document.querySelector('main')
 let asideBg = document.querySelector('aside')   
 const switchMode = document.querySelector('#mode') 
 const changeLogo = document.querySelector('.logo')
+const menuActive = document.querySelectorAll('li')
+const nonActive = document.querySelectorAll('.non-active')
+const active = document.querySelector('.active')
+const navHome = document.querySelector('#nav-home')
+const navBuilding = document.querySelector('#nav-building')
+const navLandscape = document.querySelector('#nav-landscape')
+const navAbout = document.querySelector('#nav-about')
+const mainSection = document.querySelectorAll('.main-section')
+const building = document.querySelector('.building')
+const landscape = document.querySelector('.landscape')
+const home = document.querySelector('.start-image')
 
 console.log(changeLogo)
-
-
 
 function addEventListeners() {
     
     switchMode.addEventListener('click', switchModes)
+    navHome.addEventListener('click', goToHome)
+    navBuilding.addEventListener('click', goToBuilding)
+    navLandscape.addEventListener('click', goToLandscape)
 
 }
 
@@ -34,6 +46,36 @@ function switchModes() {
     }
 }
 
+function goToHome() {
+    if(!home.classList.contains('active')) {
+        mainSection.forEach((e) => {
+            if(e.classList.contains('active')) {
+                e.classList.remove('active')
+            }
+        })
+        home.classList.add('active')        
+    }
+}
 
+function goToBuilding() {
+    if(!building.classList.contains('active')) {
+        mainSection.forEach((e) => {
+            if(e.classList.contains('active')) {
+                e.classList.remove('active')
+            }
+        })
+        building.classList.add('active')        
+    }
+}
 
+function goToLandscape() {
+    if(!landscape.classList.contains('active')) {
+        mainSection.forEach((e) => {
+            if(e.classList.contains('active')) {
+                e.classList.remove('active')
+            }
+        })
+        landscape.classList.add('active')        
+    }
+}
 
