@@ -150,10 +150,7 @@ h3 {
     position: absolute;
 }
 
-.btn {
-    width: 5rem;
-    border: 2px var(--day-mode-aside) solid;
-}
+
 
 /* main design blocks */
 aside {
@@ -228,6 +225,10 @@ li {
     cursor: pointer;
 }
 
+li p {
+    padding-left: 0.2rem;
+}
+
 li:before {
     content: '';
     position: absolute;
@@ -243,6 +244,7 @@ li:hover:before {
     margin-top: 25%;
     width: 100%;
     height: 3px;
+    font-family: 'Playfair Display', serif;
 }
 
 li:after {
@@ -297,7 +299,7 @@ li:hover:after {
 }
 
 .information {
-    padding: 10rem 2rem 0 2rem;
+    padding: 10rem 2rem 2rem 2rem;
     align-self: flex-start;
 }
 
@@ -308,12 +310,8 @@ li:hover:after {
 }
 
 .information p {
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     
-}
-
-.information .btn {
-    padding-bottom: 1.5rem;
 }
 
 .main-image {
@@ -326,6 +324,37 @@ li:hover:after {
     height: 50rem;
 
     object-fit: contain;    
+}
+
+.main-section a {
+    position: relative;
+    padding: .8rem 3rem;
+    border: 2px var(--day-mode-aside) solid;
+    transition: .5s;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.main-section a:before {
+    content: '';
+    position: absolute;
+    height: 0%;
+    top: 100;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: difference;
+    transition: .3s;
+}
+
+.main-section a:hover:before {
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;    
 }
 
 
