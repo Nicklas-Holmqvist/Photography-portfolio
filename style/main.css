@@ -53,6 +53,10 @@ White
     flex-direction: column;
 }
 
+.column-rev {
+    flex-direction: column-reverse;
+}
+
 .row {
     flex-direction: row;
 }
@@ -126,7 +130,7 @@ a {
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 /* makes main background white */
@@ -144,6 +148,11 @@ h3 {
 
 .absolute {
     position: absolute;
+}
+
+.btn {
+    width: 5rem;
+    border: 2px var(--day-mode-aside) solid;
 }
 
 /* main design blocks */
@@ -209,14 +218,60 @@ main {
 ul {
     list-style: none;
     height: 10rem;
-    padding-left: 1rem;
+    padding: 0 1rem;
+}
+
+li {
+    font-size: 1.2rem;
+    position: relative;
+    mix-blend-mode: difference;
+    cursor: pointer;
+}
+
+li:before {
+    content: '';
+    position: absolute;
+    margin-top: 25%;
+    width: 0%;
+    transition: .5s;
+}
+
+li:hover:before {
+    content: '';
+    position: absolute;
+    background-color: var(--day-mode-aside);
+    margin-top: 25%;
+    width: 100%;
+    height: 3px;
+}
+
+li:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    transition: .5s 0.1s;
+    mix-blend-mode: difference;
+}
+
+li:hover:after {
+    content: '';
+    position: absolute;
+    background-color: var(--day-mode-aside);
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
 }
 
 .social {
     align-items: flex-start;
-    padding: 2rem 1rem 2rem 1rem;
-    
+    padding: 2rem 1rem 2rem 1rem;    
 }
+
+.icon {
+    font-size: 1.2rem;
+}
+
 
 /* Start image */
 
@@ -273,34 +328,49 @@ ul {
     object-fit: contain;    
 }
 
+
+/* gallery pages */
+
 .gallery {
     height: 100%;
 }
-
-/* gallery pages */
 
 .image-container {
     padding-top: 4rem;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 82%;
+    width: 80%;
+    height: 55rem;
 }
 
 .summary {
     flex: 2;
-    padding: 4rem 2rem;
+    padding: 0 2rem 0 4rem;
     display: flex;
-    align-self: flex-start;
+    /* align-self: center; */
+    /* text-align: center; */
+}
+
+.summary h3 {
+    /* text-align: center; */
+    padding-bottom: 1.5rem;
 }
 
 .image-container .image {
-    flex: 3;    
+    flex: 4;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
 }
 
 .image-container img {
-    width: 100%;    
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;    
 }
+
+.img-
 
 .image-container:last-child {
     padding-bottom: 4rem;
