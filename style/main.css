@@ -258,6 +258,7 @@ li {
     position: relative;
     mix-blend-mode: difference;
     cursor: pointer;
+    
 }
 
 li p {
@@ -269,7 +270,7 @@ li:before {
     position: absolute;
     margin-top: 25%;
     width: 0%;
-    transition: .5s;
+    transition: width .2s ease-in-out;
 }
 
 li:hover:before {
@@ -280,8 +281,9 @@ li:hover:before {
     width: 100%;
     height: 3px;
     font-family: 'Playfair Display', serif;
+    
 }
-
+/* 
 li:after {
     content: '';
     position: absolute;
@@ -298,7 +300,7 @@ li:hover:after {
     top: 0;
     left: 0;
     bottom: 0;
-}
+} */
 
 .social {
     align-items: flex-start;
@@ -406,14 +408,15 @@ li:hover:after {
     margin: 0 auto;
     width: 80%;
     height: 55rem;
+      
 }
 
 .summary {
     flex: 2;
     padding: 0 2rem 0 4rem;
     display: flex;
-    /* align-self: center; */
-    /* text-align: center; */
+    margin-bottom: -2rem;
+    opacity: 0;
 }
 
 .summary h3 {
@@ -438,6 +441,20 @@ li:hover:after {
 
 .image-container:last-child {
     padding-bottom: 4rem;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.4s ease-in; 
+}
+
+.hidden.fadein-image {    
+    opacity: 1;
+}
+
+hidden.fadein-sum {
+    opacity: 1;
+    margin-bottom: 0
 }
 
 

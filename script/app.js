@@ -25,7 +25,13 @@ const landscapeGallery = document.querySelector('.landscape-gallery')
 const btnBuilding = document.querySelector('.btn-building')
 const btnLandscape = document.querySelector('.btn-landscape')
 
-console.log(changeLogo)
+const fadeInSum = document.querySelectorAll('.summary')
+const fadeInImg = document.querySelectorAll('.image-container .image')
+
+console.log(fadeInImg)
+
+
+
 
 function addEventListeners() {
     
@@ -106,4 +112,34 @@ function goToLandscapeGallery() {
         landscapeGallery.classList.add('active')        
     }
 }
+
+const appearOptions = {
+    treshold: 1,
+    rootMargin: "0px 0px -300px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver (
+    function(
+        entries, 
+        appearOnScroll
+        ) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {                
+                return;
+            } else {
+                // entry.target.classList.remove("hidden");
+                entry.target.classList.add("fadein-image");
+                appearOnScroll.unobserve(entry.target);
+            }
+        })
+    }, appearOptions);
+
+fadeInImg.forEach(fader => {
+    appearOnScroll.observe(fader)
+});
+
+fadeInSum.forEach(fader => {
+    setTimeout(appearOnScroll.observe(fader), 1000)    
+});
+
 
