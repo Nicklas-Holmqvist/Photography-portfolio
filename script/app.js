@@ -25,13 +25,14 @@ const landscapeGallery = document.querySelector('.landscape-gallery')
 const btnBuilding = document.querySelector('.btn-building')
 const btnLandscape = document.querySelector('.btn-landscape')
 
+const fadeInInfo = document.querySelectorAll('.information')
+const fadeInMainImage = document.querySelectorAll('.main-image')
 const fadeInSum = document.querySelectorAll('.summary')
 const fadeInImg = document.querySelectorAll('.image-container .image')
-
-console.log(fadeInImg)
-
+const setLink = document.querySelectorAll('li p')
 
 
+console.log(setLink)
 
 function addEventListeners() {
     
@@ -58,6 +59,7 @@ function switchModes() {
     }
 }
 
+
 function goToHome() {
     if(!home.classList.contains('active')) {
         nonActive.forEach((e) => {
@@ -65,7 +67,7 @@ function goToHome() {
                 e.classList.remove('active')
             }
         })
-        home.classList.add('active')        
+        home.classList.add('active')   
     }
 }
 
@@ -113,6 +115,24 @@ function goToLandscapeGallery() {
     }
 }
 
+setLink.forEach((e) => {
+    
+    e.addEventListener('click', (event) => {        
+        if (!e.classList.contains('li-active')) {   
+            setLink.forEach((i) => {
+                if(i.classList.contains('li-active')) {
+                    i.classList.remove('li-active')
+                } else {
+                    event.target.classList.add('li-active')
+                }
+            })
+        }
+    })
+})    
+        
+
+
+
 const appearOptions = {
     treshold: 1,
     rootMargin: "0px 0px -300px 0px"
@@ -141,5 +161,15 @@ fadeInImg.forEach(fader => {
 fadeInSum.forEach(fader => {
     setTimeout(appearOnScroll.observe(fader), 1000)    
 });
+
+fadeInMainImage.forEach(fader => {
+    appearOnScroll.observe(fader)
+});
+
+fadeInInfo.forEach(fader => {
+    setTimeout(appearOnScroll.observe(fader), 1000)    
+});
+
+
 
 

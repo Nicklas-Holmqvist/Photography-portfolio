@@ -253,16 +253,31 @@ ul {
     padding: 0 1rem;
 }
 
-li {
-    font-size: 1.2rem;
+li {    
     position: relative;
     mix-blend-mode: difference;
-    cursor: pointer;
-    
+    cursor: pointer;    
 }
 
 li p {
-    padding-left: 0.2rem;
+    /* font-size: 1.2rem; */
+    padding-left: 0.3rem;
+}
+
+.li-active {
+    position: relative;
+}
+
+.li-active:before {
+    content: '';
+    position: absolute;
+    background-color: var(--day-mode-aside);
+    margin-top: 25%;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    right: 0;
+    bottom: -5px;
 }
 
 li:before {
@@ -280,16 +295,23 @@ li:hover:before {
     margin-top: 25%;
     width: 100%;
     height: 3px;
+    left: 0;
+    right: 0;
+    bottom: -5px;
     font-family: 'Playfair Display', serif;
     
 }
-/* 
+
 li:after {
     content: '';
-    position: absolute;
-    width: 0%;
+    position: absolute;    
+    width: 100%;
+    height: 3px;
+    left: 0;
+    right: 0;
+    bottom: -5px;
     transition: .5s 0.1s;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
 }
 
 li:hover:after {
@@ -297,10 +319,11 @@ li:hover:after {
     position: absolute;
     background-color: var(--day-mode-aside);
     width: 100%;
-    top: 0;
+    height: 3px;
     left: 0;
-    bottom: 0;
-} */
+    right: 0;
+    bottom: -5px;
+}
 
 .social {
     align-items: flex-start;
@@ -407,8 +430,7 @@ li:hover:after {
     align-items: center;
     margin: 0 auto;
     width: 80%;
-    height: 55rem;
-      
+    height: 55rem;      
 }
 
 .summary {
