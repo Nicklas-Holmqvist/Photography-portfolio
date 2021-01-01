@@ -116,7 +116,7 @@ h1, h2, h3, h4 {
     font-weight: 300;
 }
 
-p, span, li, .btn {
+p, span, li, .btn, label, input {
     font-family: 'Roboto', sans-serif;
     mix-blend-mode: difference;
     color: var(--day-mode);
@@ -418,6 +418,47 @@ li:hover:after {
 }
 
 
+/* form */
+
+.form-section {
+    padding: 2rem 0 6rem 0;
+}
+
+form {
+    width: 25rem;
+}
+
+form label {
+    font-size: 1.1rem;
+    padding: .5rem 0;
+}
+
+form input {
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px var(--day-mode-aside) solid;
+
+    font-size: 1.1rem;
+    outline: none;
+}
+
+form .form-name {
+    margin-bottom: 1.5rem;
+}
+
+.form-submit {
+    border: none;
+}
+
+form a {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 2rem;
+    width: 12rem;
+}
+
+
 /* gallery pages */
 
 .gallery {
@@ -478,6 +519,13 @@ li:hover:after {
 hidden.fadein-sum {
     opacity: 1;
     margin-bottom: 0
+}
+
+/* footer */
+
+footer p {
+    font-size: .8rem;
+    padding: 1rem 0;
 }
 
 

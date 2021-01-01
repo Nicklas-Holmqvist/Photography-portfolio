@@ -30,6 +30,8 @@ const fadeInMainImage = document.querySelectorAll('.main-image')
 const fadeInSum = document.querySelectorAll('.summary')
 const fadeInImg = document.querySelectorAll('.image-container .image')
 const setLink = document.querySelectorAll('li p')
+const setLinkBuilding = document.querySelector('#nav-building p')
+const setLinkLandscape = document.querySelector('#nav-landscape p')
 
 
 console.log(setLink)
@@ -98,6 +100,13 @@ function goToBuildingGallery() {
         nonActive.forEach((e) => {
             if(e.classList.contains('active')) {
                 e.classList.remove('active')
+                setLink.forEach((i) => {
+                    if(i.classList.contains('li-active')) {
+                        i.classList.remove('li-active')
+                    } else {
+                        setLinkBuilding.classList.add('li-active')
+                    }
+                })
             }
         })
         buildingGallery.classList.add('active')        
@@ -109,6 +118,13 @@ function goToLandscapeGallery() {
         nonActive.forEach((e) => {
             if(e.classList.contains('active')) {
                 e.classList.remove('active')
+                setLink.forEach((i) => {
+                    if(i.classList.contains('li-active')) {
+                        i.classList.remove('li-active')
+                    } else {
+                        setLinkLandscape.classList.add('li-active')
+                    }
+                })
             }
         })
         landscapeGallery.classList.add('active')        
@@ -129,9 +145,6 @@ setLink.forEach((e) => {
         }
     })
 })    
-        
-
-
 
 const appearOptions = {
     treshold: 1,
