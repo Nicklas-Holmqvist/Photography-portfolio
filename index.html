@@ -7,7 +7,9 @@
     <!-- css-files -->
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/small-desktop.css">
+    <link rel="stylesheet" href="./style/large-tablet.css">
     <link rel="stylesheet" href="./style/tablet.css">
+    <link rel="stylesheet" href="./style/mobile.css">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -34,10 +36,16 @@
         <div class="mode absolute">
             <i class="fas fa-moon mode-icon" id="mode"></i>
         </div>
+        <div class="hamburger-container flex center column evenly mobile absolute">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <!-- menu -->
-        <aside class="flex column">
+        <aside class="flex column hambuger-menu">
             <div class="aside-container center flex column fhp">
+
                 <div class="logo-container flex left flex-1"><img src="./style/img/logo-darkmode.png" class="logo" alt="day-logo">
                 </div>
                 <div class="menu flex-4 fw">

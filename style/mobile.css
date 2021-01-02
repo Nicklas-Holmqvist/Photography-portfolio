@@ -1,0 +1,81 @@
+@media (max-width:38em) {
+
+    main {
+        padding: 0;
+    }
+    aside {
+        
+        width: 100%;
+        background-color: var(--dark-mode);
+        z-index: 20;
+    }
+
+    .open-menu {
+        transform: translateX(-100%);
+    }
+
+    .aside-container {
+        padding: 0;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        padding: 2rem 2rem 0 2rem;
+    }
+
+    .logo {
+        width: 20%;
+
+    }
+
+    ul {
+        height: 15rem;
+        width: 100%;
+        padding: 0 2rem;
+        justify-content: space-evenly;
+    }
+
+    li p {
+        font-size: 4rem;
+        padding: .5rem 0;
+    }
+
+    .social {
+        flex-direction: row;
+        padding: 4rem 2rem 0 2rem;
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+    .hamburger-container {
+        position: fixed;
+        width: 4rem;
+        height: 3.5rem;
+        top: 1rem;
+        left: 1rem;
+        z-index: 10;
+        cursor: pointer;
+        /* margin: 1rem; */
+        /* border: 1px var(--day-mode-aside) solid; */
+        mix-blend-mode: difference;
+    }
+
+    span {     
+        display: inline-block;   
+        height: 2px;
+        width: 75%;
+        background-color: var(--day-mode-aside);
+        mix-blend-mode: difference;
+    }
+
+    .information h2 {
+        font-size: 2.5rem;
+    }
+
+    .information p{
+        padding-bottom: 2rem;
+    }
+
+}
