@@ -2,6 +2,8 @@ window.addEventListener('load', main)
 
 function main() {
     addEventListeners()
+    openMenu()
+    closMenu()
 }
 
 
@@ -146,6 +148,36 @@ setLink.forEach((e) => {
     })
 })    
 
+function openMenu() {
+    const hamburgerBtn = document.querySelector('.hamburger-container')
+    let hamburgerMenu = document.querySelector('aside')    
+
+    hamburgerBtn.addEventListener('click', () => {
+        hamburgerMenu.classList.toggle('open-menu')
+        // if (hamburgerMenu.classList.contains('open-menu')) {
+        //     hamburgerMenu.classList.toggle('open-menu')
+        // } else {
+        //     hamburgerMenu.classList.add('open-menu')
+        // }
+    })
+}
+
+
+function closMenu() {
+    let hamburgerMenu = document.querySelector('aside')
+    hamburgerMenu.addEventListener('click', () => {
+        if (!hamburgerMenu.classList.contains('open-menu')) {
+            hamburgerMenu.classList.add('open-menu')            
+        } else {
+            return            
+        }
+    })
+
+}
+
+
+
+
 const appearOptions = {
     treshold: 1,
     rootMargin: "0px 0px -300px 0px"
@@ -182,6 +214,8 @@ fadeInMainImage.forEach(fader => {
 fadeInInfo.forEach(fader => {
     setTimeout(appearOnScroll.observe(fader), 1000)    
 });
+
+
 
 
 
