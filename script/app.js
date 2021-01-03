@@ -25,6 +25,7 @@ const landscape = document.querySelector('.landscape')
 const home = document.querySelector('.start-image')
 const buildingGallery = document.querySelector('.building-gallery')
 const landscapeGallery = document.querySelector('.landscape-gallery')
+const aboutMe = document.querySelector('.about-section')
 const btnBuilding = document.querySelector('.btn-building')
 const btnLandscape = document.querySelector('.btn-landscape')
 
@@ -45,6 +46,7 @@ function addEventListeners() {
     navHome.addEventListener('click', goToHome)
     navBuilding.addEventListener('click', goToBuildingGallery)
     navLandscape.addEventListener('click', goToLandscapeGallery)
+    navAbout.addEventListener('click', goToAboutMe)
     btnBuilding.addEventListener('click', goToBuildingGallery)
     btnLandscape.addEventListener('click', goToLandscapeGallery)
 
@@ -95,6 +97,17 @@ function goToLandscape() {
             }
         })
         landscape.classList.add('active')        
+    }
+}
+
+function goToAboutMe() {
+    if(!aboutMe.classList.contains('active')) {
+        nonActive.forEach((e) => {
+            if(e.classList.contains('active')) {
+                e.classList.remove('active')
+            }
+        })
+        aboutMe.classList.add('active')        
     }
 }
 

@@ -94,7 +94,35 @@
         padding-bottom: 2rem;
     }
 
+    .form-section {
+        padding-bottom: 4rem;
+    }
+
     form {
+        width: 100%;
+    }
+
+    .about-section {
+        /* padding-top: 4rem; */
+        justify-content: center;
+        align-items: center;
+        /* margin: 0 auto; */
+    
+    }
+
+    .about-container .information {
+        padding: 2rem 2rem;
+    }
+    
+    .about-container .image {
+        padding-top: 6rem;
+    }
+
+    .about-container .image img {
+        width: 80%;
+    }
+
+    .image img {
         width: 100%;
     }
 
