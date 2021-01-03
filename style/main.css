@@ -184,11 +184,11 @@ main {
     transition: .4s;   
     overflow: hidden;
     border-radius: 50%;
+
 }
 
 .mode:hover {
-    background-color: var(--day-mode-aside);   
-    
+    background-color: var(--day-mode-aside);       
 }
 
 .mode-icon {
@@ -219,6 +219,7 @@ main {
     right: 0;
     position: absolute;
 }
+
 
 .non-active {
     display: none;

@@ -10,6 +10,7 @@ function main() {
 let mainBg = document.querySelector('main')   
 let asideBg = document.querySelector('aside')   
 const switchMode = document.querySelector('#mode') 
+const switchModeMobile = document.querySelector('.mode') 
 const changeLogo = document.querySelector('.logo')
 const menuActive = document.querySelectorAll('li')
 const nonActive = document.querySelectorAll('.non-active')
@@ -154,11 +155,7 @@ function openMenu() {
 
     hamburgerBtn.addEventListener('click', () => {
         hamburgerMenu.classList.toggle('open-menu')
-        // if (hamburgerMenu.classList.contains('open-menu')) {
-        //     hamburgerMenu.classList.toggle('open-menu')
-        // } else {
-        //     hamburgerMenu.classList.add('open-menu')
-        // }
+        switchModeMobile.classList.toggle('mobile-switch-theme');       
     })
 }
 
@@ -167,12 +164,12 @@ function closMenu() {
     let hamburgerMenu = document.querySelector('aside')
     hamburgerMenu.addEventListener('click', () => {
         if (!hamburgerMenu.classList.contains('open-menu')) {
-            hamburgerMenu.classList.add('open-menu')            
+            hamburgerMenu.classList.add('open-menu')   
+            switchModeMobile.classList.remove('mobile-switch-theme');    
         } else {
             return            
         }
     })
-
 }
 
 

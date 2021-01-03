@@ -35,6 +35,16 @@
 
     }
 
+    .mode {
+        opacity: 0;
+        transition: opacity .5s .5s;
+        z-index: 50;
+    }
+
+    .mobile-switch-theme {
+        opacity: 1;
+    }
+
     ul {
         height: 15rem;
         width: 100%;
@@ -82,6 +92,10 @@
 
     .information p{
         padding-bottom: 2rem;
+    }
+
+    form {
+        width: 100%;
     }
 
 }
