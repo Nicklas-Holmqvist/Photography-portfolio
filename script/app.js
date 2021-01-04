@@ -1,32 +1,24 @@
 window.addEventListener('load', main)
 
-
 /**
  * Main function that runs at window load
  */
 function main() {
     addEventListeners()
 }
-
-let mainBg = document.querySelector('main')   
-let asideBg = document.querySelector('aside')   
+ 
 const switchMode = document.querySelector('#mode') 
 const switchModeMobile = document.querySelector('.mode') 
-const changeLogo = document.querySelector('.logo')
-const menuActive = document.querySelectorAll('li')
+
+const setLink = document.querySelectorAll('li p')
+
 const nonActive = document.querySelectorAll('.non-active')
 const active = document.querySelector('.active')
 const navHome = document.querySelector('#nav-home')
 const navBuilding = document.querySelector('#nav-building')
 const navLandscape = document.querySelector('#nav-landscape')
 const navAbout = document.querySelector('#nav-about')
-const mainSection = document.querySelectorAll('.main-section')
-const building = document.querySelector('.building')
-const landscape = document.querySelector('.landscape')
-const home = document.querySelector('.start-image')
-const buildingGallery = document.querySelector('.building-gallery')
-const landscapeGallery = document.querySelector('.landscape-gallery')
-const aboutMe = document.querySelector('.about-section')
+
 const btnBuilding = document.querySelector('.btn-building')
 const btnLandscape = document.querySelector('.btn-landscape')
 
@@ -34,9 +26,6 @@ const fadeInInfo = document.querySelectorAll('.information')
 const fadeInMainImage = document.querySelectorAll('.main-image')
 const fadeInSum = document.querySelectorAll('.summary')
 const fadeInImg = document.querySelectorAll('.image-container .image')
-const setLink = document.querySelectorAll('li p')
-const setLinkBuilding = document.querySelector('#nav-building p')
-const setLinkLandscape = document.querySelector('#nav-landscape p')
 
 /**
  * runs all the functions, this function is running in the main-function
@@ -60,7 +49,12 @@ function addEventListeners() {
  * mix-blend-mode: difference;
  */
 function switchModes() {
-    console.log('nope')
+    
+    let mainBg = document.querySelector('main')   
+    let asideBg = document.querySelector('aside')  
+
+    const changeLogo = document.querySelector('.logo')
+
     if(!mainBg.classList.contains("dark-mode")) {
         mainBg.classList.add("dark-mode")
         asideBg.classList.add("dark-mode-aside")
@@ -77,6 +71,8 @@ function switchModes() {
  *  Function to show home screen
  */
 function goToHome() {
+    const home = document.querySelector('.start-image')
+
     if(!home.classList.contains('active')) {
         nonActive.forEach((e) => {
             if(e.classList.contains('active')) {
@@ -91,6 +87,8 @@ function goToHome() {
  * Function to show building screen
  */
 function goToBuilding() {
+    const building = document.querySelector('.building')
+
     if(!building.classList.contains('active')) {
         nonActive.forEach((e) => {
             if(e.classList.contains('active')) {
@@ -105,6 +103,8 @@ function goToBuilding() {
  * Function to show landscape screen
  */
 function goToLandscape() {
+    const landscape = document.querySelector('.landscape')
+
     if(!landscape.classList.contains('active')) {
         nonActive.forEach((e) => {
             if(e.classList.contains('active')) {
@@ -119,6 +119,8 @@ function goToLandscape() {
  * Function to show about me screen
  */
 function goToAboutMe() {
+    const aboutMe = document.querySelector('.about-section')
+
     if(!aboutMe.classList.contains('active')) {
         nonActive.forEach((e) => {
             if(e.classList.contains('active')) {
@@ -133,6 +135,9 @@ function goToAboutMe() {
  * Function that goes to building gallery from the button on start
  */
 function goToBuildingGallery() {
+    const buildingGallery = document.querySelector('.building-gallery')
+    const setLinkBuilding = document.querySelector('#nav-building p')
+
     if(!buildingGallery.classList.contains('active')) {
         nonActive.forEach((e) => {
             if(e.classList.contains('active')) {
@@ -154,6 +159,9 @@ function goToBuildingGallery() {
  * Function that goes to landscape gallery from the button on start
  */
 function goToLandscapeGallery() {
+    const landscapeGallery = document.querySelector('.landscape-gallery')
+    const setLinkLandscape = document.querySelector('#nav-landscape p')
+
     if(!landscapeGallery.classList.contains('active')) {
         nonActive.forEach((e) => {
             if(e.classList.contains('active')) {
@@ -189,7 +197,6 @@ setLink.forEach((e) => {
     })
 })    
 
-
 /**
  * Open up the hamburger menu
  */
@@ -204,7 +211,7 @@ function openMenu() {
 }
 
 /**
- * Close the hamburger menu
+ * Close the hamburger menu when clicked anywhere on the screen
  */
 function closMenu() {
     let hamburgerMenu = document.querySelector('aside')
@@ -218,13 +225,11 @@ function closMenu() {
     })
 }
 
-
 // intersection options
 const appearOptions = {
     treshold: 0.8,
     rootMargin: "0px 0px -200px 0px"
 };
-
 
 const appearOnScroll = new IntersectionObserver (
     function(
