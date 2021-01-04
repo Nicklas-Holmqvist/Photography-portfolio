@@ -1,11 +1,12 @@
 window.addEventListener('load', main)
 
+
+/**
+ * Main function that runs at window load
+ */
 function main() {
     addEventListeners()
-    openMenu()
-    closMenu()
 }
-
 
 let mainBg = document.querySelector('main')   
 let asideBg = document.querySelector('aside')   
@@ -37,11 +38,10 @@ const setLink = document.querySelectorAll('li p')
 const setLinkBuilding = document.querySelector('#nav-building p')
 const setLinkLandscape = document.querySelector('#nav-landscape p')
 
-
-console.log(setLink)
-
-function addEventListeners() {
-    
+/**
+ * runs all the functions, this function is running in the main-function
+ */
+function addEventListeners() {    
     switchMode.addEventListener('click', switchModes)
     navHome.addEventListener('click', goToHome)
     navBuilding.addEventListener('click', goToBuildingGallery)
@@ -49,9 +49,16 @@ function addEventListeners() {
     navAbout.addEventListener('click', goToAboutMe)
     btnBuilding.addEventListener('click', goToBuildingGallery)
     btnLandscape.addEventListener('click', goToLandscapeGallery)
-
+    openMenu()
+    closMenu()
 }
 
+
+/**
+ * Function to switch dark and daymode
+ * There is an css option on the specific classes that are gonna change when switches
+ * mix-blend-mode: difference;
+ */
 function switchModes() {
     console.log('nope')
     if(!mainBg.classList.contains("dark-mode")) {
@@ -66,7 +73,9 @@ function switchModes() {
     }
 }
 
-
+/**
+ *  Function to show home screen
+ */
 function goToHome() {
     if(!home.classList.contains('active')) {
         nonActive.forEach((e) => {
@@ -78,6 +87,9 @@ function goToHome() {
     }
 }
 
+/**
+ * Function to show building screen
+ */
 function goToBuilding() {
     if(!building.classList.contains('active')) {
         nonActive.forEach((e) => {
@@ -89,6 +101,9 @@ function goToBuilding() {
     }
 }
 
+/**
+ * Function to show landscape screen
+ */
 function goToLandscape() {
     if(!landscape.classList.contains('active')) {
         nonActive.forEach((e) => {
@@ -100,6 +115,9 @@ function goToLandscape() {
     }
 }
 
+/**
+ * Function to show about me screen
+ */
 function goToAboutMe() {
     if(!aboutMe.classList.contains('active')) {
         nonActive.forEach((e) => {
@@ -111,6 +129,9 @@ function goToAboutMe() {
     }
 }
 
+/**
+ * Function that goes to building gallery from the button on start
+ */
 function goToBuildingGallery() {
     if(!buildingGallery.classList.contains('active')) {
         nonActive.forEach((e) => {
@@ -129,6 +150,9 @@ function goToBuildingGallery() {
     }
 }
 
+/**
+ * Function that goes to landscape gallery from the button on start
+ */
 function goToLandscapeGallery() {
     if(!landscapeGallery.classList.contains('active')) {
         nonActive.forEach((e) => {
@@ -147,6 +171,9 @@ function goToLandscapeGallery() {
     }
 }
 
+/**
+ * Function that sets an underline at active link in menu
+ */
 setLink.forEach((e) => {
     
     e.addEventListener('click', (event) => {        
@@ -162,6 +189,10 @@ setLink.forEach((e) => {
     })
 })    
 
+
+/**
+ * Open up the hamburger menu
+ */
 function openMenu() {
     const hamburgerBtn = document.querySelector('.hamburger-container')
     let hamburgerMenu = document.querySelector('aside')    
@@ -172,7 +203,9 @@ function openMenu() {
     })
 }
 
-
+/**
+ * Close the hamburger menu
+ */
 function closMenu() {
     let hamburgerMenu = document.querySelector('aside')
     hamburgerMenu.addEventListener('click', () => {
@@ -186,12 +219,12 @@ function closMenu() {
 }
 
 
-
-
+// intersection options
 const appearOptions = {
-    treshold: 1,
-    rootMargin: "0px 0px -300px 0px"
+    treshold: 0.8,
+    rootMargin: "0px 0px -200px 0px"
 };
+
 
 const appearOnScroll = new IntersectionObserver (
     function(
@@ -207,26 +240,24 @@ const appearOnScroll = new IntersectionObserver (
                 appearOnScroll.unobserve(entry.target);
             }
         })
-    }, appearOptions);
+    }, appearOptions);    
 
+// intersection fadein for images in gallery
 fadeInImg.forEach(fader => {
     appearOnScroll.observe(fader)
 });
 
+// intersection fadein for text in gallery
 fadeInSum.forEach(fader => {
     setTimeout(appearOnScroll.observe(fader), 1000)    
 });
 
+// intersection fadein for images in start
 fadeInMainImage.forEach(fader => {
     appearOnScroll.observe(fader)
 });
 
+// intersection fadein for text in start
 fadeInInfo.forEach(fader => {
     setTimeout(appearOnScroll.observe(fader), 1000)    
 });
-
-
-
-
-
-
