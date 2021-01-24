@@ -1,0 +1,15 @@
+
+
+	Nicklasfoto
+	-mode, css klass "mode"
+	-lägg på css klass "light" för ändra alla sidor till ljust
+
+	Sidor:
+	Startsida
+	Landskap
+	Byggnader
+	Om mig
+
+	Funktion på sidor
+	-fullskärm bilspel
+	

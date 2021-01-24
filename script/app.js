@@ -183,16 +183,16 @@ function goToLandscapeGallery() {
  * Function that sets an underline at active link in menu
  */
 setLink.forEach((e) => {
-    
-    e.addEventListener('click', (event) => {        
-        if (!e.classList.contains('li-active')) {   
+
+    e.addEventListener('click', () => {        
+        if (e.classList.contains('li-active')) {
+            e.classList.remove('li-active')
+        }
+        else if (!e.classList.contains('li-active')) {   
             setLink.forEach((i) => {
-                if(i.classList.contains('li-active')) {
-                    i.classList.remove('li-active')
-                } else {
-                    event.target.classList.add('li-active')
-                }
+                i.classList.remove('li-active')
             })
+            e.classList.add('li-active')
         }
     })
 })    
